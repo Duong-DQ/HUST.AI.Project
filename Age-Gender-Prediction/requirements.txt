@@ -1,6 +1,6 @@
 numpy
 pandas
-tensorflow[gpu]
+tensorflow
 matplotlib
 scikit-learn
 Pillow
