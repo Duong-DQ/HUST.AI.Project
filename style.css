@@ -107,6 +107,14 @@ html,body{
   background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
 }
 
+.predict-area.active {
+  display: block;
+}
+
+.predict-area {
+  display: none;
+}
+
 .container #predict-btn{
   margin-top: 30px;
   display: block;
@@ -140,6 +148,6 @@ html,body{
 
 .wrapper-2 .text{
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   color: #5B5B7B;
 }

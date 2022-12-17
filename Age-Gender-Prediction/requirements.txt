@@ -5,3 +5,8 @@ matplotlib
 scikit-learn
 Pillow
 opencv-python
+flask
+pickle
+tqdm
+pydot
+graphviz
