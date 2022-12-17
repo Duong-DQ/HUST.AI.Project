@@ -10,3 +10,4 @@ pickle
 tqdm
 pydot
 graphviz
+streamlit
