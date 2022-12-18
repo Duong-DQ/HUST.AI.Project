@@ -48,9 +48,15 @@ def process_and_predict(file):
 def main():
     
     st.header("AGE AND GENDER PREDICTION")
-    st.write(
-        "Upload an image find out! (preferably a squared image and containing only a face)"
-    )
+
+    with st.expander("This is AI-course project of group 3"):
+        st.markdown('''
+        Our project is built to predict the age and gender of humans using CNN.
+
+        Upload an image find out! (preferably a squared image and containing only a face)
+
+        [link to repo]()
+        ''')
     file = st.file_uploader("Upload Photo")
     if file is not None:
         st.image(file, width=300)
