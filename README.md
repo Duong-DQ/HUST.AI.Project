@@ -6,3 +6,8 @@
 
 ## Team
 
+### Chay code 
+
+```bash
+pip install -r Age-Gender-Prediction\requirements.txt
+```
