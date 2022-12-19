@@ -3,12 +3,12 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 
-agemodel = tf.keras.models.load_model(".\\checkpoints\\agemodel-3.h5")
-genmodel = tf.keras.models.load_model(".\\checkpoints\\genmodel-3.h5")
-genmodel1 = tf.keras.models.load_model(".\\checkpoints\\genmodel-1.h5")
-genmodel2 = tf.keras.models.load_model(".\\checkpoints\\genmodel-2.h5")
-agemodel1 = tf.keras.models.load_model(".\\checkpoints\\agemodel-1.h5")
-agemodel2 = tf.keras.models.load_model(".\\checkpoints\\agemodel-2.h5")
+agemodel = tf.keras.models.load_model("agemodel-3.h5")
+genmodel = tf.keras.models.load_model("genmodel-3.h5")
+genmodel1 = tf.keras.models.load_model("genmodel-1.h5")
+genmodel2 = tf.keras.models.load_model("genmodel-2.h5")
+agemodel1 = tf.keras.models.load_model("agemodel-1.h5")
+agemodel2 = tf.keras.models.load_model("agemodel-2.h5")
 
 def process_and_predict(file):
     im = Image.open(file)
