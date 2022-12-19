@@ -3,8 +3,12 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 
-agemodel = tf.keras.models.load_model("checkpoints\\agemodel.h5")
-genmodel = tf.keras.models.load_model("checkpoints\\genmodel.h5")
+agemodel = tf.keras.models.load_model("checkpoints\\agemodel-3.h5")
+genmodel = tf.keras.models.load_model("checkpoints\\genmodel-3.h5")
+genmodel1 = tf.keras.models.load_model("checkpoints\\genmodel-1.h5")
+genmodel2 = tf.keras.models.load_model("checkpoints\\genmodel-2.h5")
+agemodel1 = tf.keras.models.load_model("checkpoints\\agemodel-1.h5")
+agemodel2 = tf.keras.models.load_model("checkpoints\\agemodel-2.h5")
 
 def process_and_predict(file):
     im = Image.open(file)
@@ -42,6 +46,27 @@ def process_and_predict(file):
 
     info = "Age: " + str(int(age)) + " - Gender: " + gender
     st.subheader(info)
+
+    age = agemodel1.predict(ar)
+    gender = np.round(genmodel1.predict(ar))
+    if gender == 0:
+        gender = "Male"
+    elif gender == 1:
+        gender = "Female"
+
+    info = "Age: " + str(int(age)) + " - Gender: " + gender
+    st.subheader(info)
+
+    age = agemodel2.predict(ar)
+    gender = np.round(genmodel2.predict(ar))
+    if gender == 0:
+        gender = "Male"
+    elif gender == 1:
+        gender = "Female"
+
+    info = "Age: " + str(int(age)) + " - Gender: " + gender
+    st.subheader(info)
+
     return im.resize((300, 300), Image.ANTIALIAS)
 
 
