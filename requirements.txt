@@ -1,0 +1,12 @@
+numpy
+pandas
+tensorflow
+matplotlib
+scikit-learn
+Pillow
+opencv-python
+flask
+tqdm
+pydot
+graphviz
+streamlit
